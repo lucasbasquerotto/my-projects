@@ -1,6 +1,7 @@
-for(var i=0; i<5; i++){
-  console.log(i);
+for (var i = 0; i < 5; i++) {
+    console.log(i);
 }
+
 console.log("done");
 
 var a = "npm init";
