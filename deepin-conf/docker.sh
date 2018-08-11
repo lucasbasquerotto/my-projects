@@ -1,3 +1,4 @@
+#!/bin/bash
 # 1. If you already installed a previous version, remove it
 sudo apt-get remove docker docker-engine
 
