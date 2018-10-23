@@ -1,6 +1,10 @@
 # Custom tz data based on tzdata-2018f
 
-https://www.iana.org/time-zones/releases/
+https://data.iana.org/time-zones/releases/
+
+(asia from 2018e: https://data.iana.org/time-zones/releases/tzdata2018e.tar.gz)
+
+(everything else from 2018f: https://data.iana.org/time-zones/releases/tzdata2018f.tar.gz)
 
 ## Example Dockerfile to update tzdata
 
