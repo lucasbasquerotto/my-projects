@@ -25,7 +25,7 @@ RUN apt-get update &&  \
     apt-get install -f -y && \
     apt-get clean && \
     rm google-chrome-stable_current_amd64.deb && \
-    mkdir Sources && \
+    mkdir /app && \
     mkdir -p /root/.cache/yarn/ && \
 
 # Font libraries
@@ -113,5 +113,5 @@ RUN yes Y | ${ANDROID_HOME}/tools/bin/sdkmanager \
 
 RUN cordova telemetry off
 
-WORKDIR Sources
+WORKDIR /app
 EXPOSE 8100 35729
