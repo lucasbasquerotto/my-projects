@@ -15,3 +15,8 @@ echo "(or right-click the 'Show Applications' button at the bottom left corner o
 echo "6) Go to Behaviour -> Desktop Button"
 echo "7) Go to Behaviour -> Ungroup Applications"
 echo "(in the settings define title width as 0)"
+
+# If keyboard is wrong in login page
+# $ localectl set-x11-keymap br,br pc105 br
+# $ or
+# $ localectl set-x11-keymap br,br pc105 nativo
