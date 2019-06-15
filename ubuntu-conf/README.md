@@ -1,4 +1,4 @@
-# 1. Install the Tweaks tool to be able to customize the desktop look and feel
+## 1. Install the Tweaks tool to be able to customize the desktop look and feel
 
 ```bash
 curl -L https://raw.githubusercontent.com/lucasbasquerotto/my-projects/master/ubuntu-conf/desktop.sh -o ~/desktop
@@ -7,7 +7,7 @@ chmod +x desktop
 rm desktop
 ```
 
-## To use it:
+### To use it:
 
 1) Log-out and Log back-in
 2) Launch the “Tweaks” application
@@ -19,6 +19,7 @@ rm desktop
 7) Go to Behaviour -> Ungroup Applications
 (in the settings define title width as 0)
 
-# 2. Disable the mouse middle click button pasting text:
+## 2. Disable the mouse middle click button pasting text:
 
 1) VSCode: `"editor.selectionClipboard": false`
+2) Chrome: extension/plugin AutoScroll
