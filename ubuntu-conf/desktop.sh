@@ -28,6 +28,18 @@ EOF
 xbindkeys -p
 
 # Run "xbindkeys" on startup, "pkill xbindkeys" to stop
+cat << EOF
+[Unit]
+Description=Job that runs xbindkeys to disable middle mouse button paste
+
+[Service]
+ExecStart=xbindkeys
+Type=oneshot
+RemainAfterExit=yes
+
+[Install]
+WantedBy=multi-user.target
+EOF | sudo tee /etc/systemd/system/xbindkeys
 
 # If keyboard is wrong in login page
 # $ localectl set-x11-keymap br,br pc105 br
