@@ -1,4 +1,6 @@
 #!/bin/bash
+set -eou pipefail
+
 # Install Tweaks and allow ungroup applications
 sudo apt install -y \
   gnome-shell-extensions \
