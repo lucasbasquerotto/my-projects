@@ -16,8 +16,18 @@ echo "6) Go to Behaviour -> Desktop Button"
 echo "7) Go to Behaviour -> Ungroup Applications"
 echo "(in the settings define title width as 0)"
 
-# To disable the mouse middle click button pasting text in VSCode, define the setting 
-# "editor.selectionClipboard": false
+# To disable the mouse middle click button pasting text:
+# https://unix.stackexchange.com/a/277488/293952
+sudo apt install xbindkeys xsel xdotool
+
+cat > ~/.xbindkeysrc << EOF
+"echo -n | xsel -n -i; pkill xbindkeys; xdotool click 2; xbindkeys"
+b:2 + Release
+EOF
+
+xbindkeys -p
+
+# Run "xbindkeys" on startup, "pkill xbindkeys" to stop
 
 # If keyboard is wrong in login page
 # $ localectl set-x11-keymap br,br pc105 br
