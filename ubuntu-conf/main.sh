@@ -10,8 +10,7 @@ echo 'deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main' | sud
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
 sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu bionic stable" -y
 
-sudo apt -y  install software-properties-common
-sudo add-apt-repository -y ppa:projectatomic/ppa
+# sudo add-apt-repository -y ppa:projectatomic/ppa
 
 wget -q https://packages.microsoft.com/keys/microsoft.asc -O- | sudo apt-key add -
 sudo add-apt-repository "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main"
@@ -25,12 +24,10 @@ sudo apt update
 sudo apt install -y \
   google-chrome-stable \
   docker-ce \
-  podman\
+  # podman \
   code \
   spotify-client \
   steam
-
-echo "Docker Installed"
 
 # Install Tweaks and allow ungroup applications
 sudo apt install -y \
