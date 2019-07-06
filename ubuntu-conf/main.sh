@@ -48,7 +48,7 @@ cd ~ && git clone https://bitbucket.org/lucasbasquerotto/info
 mkdir -p ~/git/bucket
 mkdir -p ~/git/others
 cd ~/git/bucket && git clone https://bitbucket.org/lucasbasquerotto/ansible-env-demo
-cd ~/git/others && git clone https://github.com/lucasbasquerotto/discourse-docker
+cd ~/git/others && git clone https://github.com/lucasbasquerotto/discourse_docker
 
 sudo mkdir /main
 sudo chmod 777 /main
