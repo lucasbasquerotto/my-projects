@@ -16,12 +16,15 @@ sudo add-apt-repository "deb [arch=amd64] https://packages.microsoft.com/repos/v
 sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 931FF8E79F0876134EDDBDCCA87FF9DF48BF1C90
 echo deb http://repository.spotify.com stable non-free | sudo tee /etc/apt/sources.list.d/spotify.list
 
+sudo add-apt-repository multiverse
+
 sudo apt update
 sudo apt install -y \
   google-chrome-stable \
   docker-ce \
   code \
-  spotify-client
+  spotify-client \
+  steam
 
 echo "Docker Installed"
 
