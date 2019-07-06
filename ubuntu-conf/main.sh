@@ -1,5 +1,29 @@
 #!/bin/bash
-set -eou pipefail
+set -eoux pipefail
+
+sudo apt update
+sudo apt install -y apt-transport-https ca-certificates curl software-properties-common wget
+
+wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
+echo 'deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main' | sudo tee /etc/apt/sources.list.d/google-chrome.list
+
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu bionic stable" -y
+
+wget -q https://packages.microsoft.com/keys/microsoft.asc -O- | sudo apt-key add -
+sudo add-apt-repository "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main"
+
+sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 931FF8E79F0876134EDDBDCCA87FF9DF48BF1C90
+echo deb http://repository.spotify.com stable non-free | sudo tee /etc/apt/sources.list.d/spotify.list
+
+sudo apt update
+sudo apt install -y \
+  google-chrome-stable \
+  docker-ce \
+  code \
+  spotify-client
+
+echo "Docker Installed"
 
 # Install Tweaks and allow ungroup applications
 sudo apt install -y \
