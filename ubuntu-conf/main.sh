@@ -39,6 +39,9 @@ if [ ! -d ~/.local/share/gnome-shell/extensions/dynamic-panel-transparency@rocko
   mv dynamic-panel-transparency/dynamic-panel-transparency@rockon999.github.io/ ~/.local/share/gnome-shell/extensions/
 fi
 
+git config --global credential.helper store
+cd ~ && git clone https://bitbucket.org/lucasbasquerotto/info
+
 echo "1) Log-out and Log back-in"
 echo "2) Launch the “Tweaks” application"
 echo "3) Click the “Extensions” category at the left side of the Tweaks window"
