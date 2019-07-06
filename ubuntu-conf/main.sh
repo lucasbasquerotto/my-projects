@@ -45,8 +45,17 @@ git config --global user.name "Lucas Basquerotto"
 
 cd ~ && git clone https://bitbucket.org/lucasbasquerotto/info
 
+mkdir -p ~/git/bucket
+mkdir -p ~/git/others
+cd ~/git/bucket && git clone https://bitbucket.org/lucasbasquerotto/ansible-env-demo
+cd ~/git/others && git clone https://github.com/lucasbasquerotto/discourse-docker
+
 sudo mkdir /main
 sudo chmod 777 /main
+
+cd /main
+git clone https://github.com/lucasbasquerotto/ansible-manager
+git clone https://github.com/lucasbasquerotto/ansible-docker
 
 echo "1) Log-out and Log back-in"
 echo "2) Launch the “Tweaks” application"
