@@ -27,18 +27,17 @@ sudo apt install -y \
   # podman \
   code \
   spotify-client \
-  steam
-
-# Install Tweaks and allow ungroup applications
-sudo apt install -y \
+  steam \
   gnome-shell-extensions \
   gnome-shell-extension-dash-to-panel \
   gnome-tweaks \
   adwaita-icon-theme-full
 
-mkdir ~/tmp && mkdir -p ~/.local/share/gnome-shell/extensions/ && cd ~/tmp
-git clone https://github.com/rockon999/dynamic-panel-transparency.git
-mv dynamic-panel-transparency/dynamic-panel-transparency@rockon999.github.io/ ~/.local/share/gnome-shell/extensions/
+if [ ! -d ~/.local/share/gnome-shell/extensions/dynamic-panel-transparency@rockon999.github.io/ ]; then
+  mkdir ~/tmp && mkdir -p ~/.local/share/gnome-shell/extensions/ && cd ~/tmp
+  git clone https://github.com/rockon999/dynamic-panel-transparency.git
+  mv dynamic-panel-transparency/dynamic-panel-transparency@rockon999.github.io/ ~/.local/share/gnome-shell/extensions/
+fi
 
 echo "1) Log-out and Log back-in"
 echo "2) Launch the “Tweaks” application"
