@@ -42,6 +42,9 @@ fi
 git config --global credential.helper store
 cd ~ && git clone https://bitbucket.org/lucasbasquerotto/info
 
+sudo mkdir /main
+chmod 777 /main
+
 echo "1) Log-out and Log back-in"
 echo "2) Launch the “Tweaks” application"
 echo "3) Click the “Extensions” category at the left side of the Tweaks window"
