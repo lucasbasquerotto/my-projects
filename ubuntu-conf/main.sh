@@ -40,6 +40,9 @@ if [ ! -d ~/.local/share/gnome-shell/extensions/dynamic-panel-transparency@rocko
 fi
 
 git config --global credential.helper store
+git config --global user.email "lucasbasquerotto@example.com"
+git config --global user.name "Lucas Basquerotto"
+
 cd ~ && git clone https://bitbucket.org/lucasbasquerotto/info
 
 sudo mkdir /main
